@@ -1,0 +1,255 @@
+0 verbose cli /home/gitpod/.nvm/versions/node/v16.19.0/bin/node /home/gitpod/.nvm/versions/node/v16.19.0/bin/npm
+1 info using npm@8.19.3
+2 info using node@v16.19.0
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:/home/gitpod/.nvm/versions/node/v16.19.0/lib/node_modules/npm/npmrc Completed in 3ms
+6 timing config:load:builtin Completed in 3ms
+7 warn config tmp This setting is no longer used.  npm stores temporary files in a special
+7 warn config location in the cache, and they are managed by
+7 warn config     [`cacache`](http://npm.im/cacache).
+8 timing config:load:cli Completed in 3ms
+9 timing config:load:env Completed in 0ms
+10 timing config:load:file:/workspace/pSaas/venv/.npmrc Completed in 0ms
+11 timing config:load:project Completed in 1ms
+12 timing config:load:file:/home/gitpod/.npmrc Completed in 3ms
+13 timing config:load:user Completed in 3ms
+14 timing config:load:file:/workspace/pSaas/venv/etc/npmrc Completed in 0ms
+15 timing config:load:global Completed in 0ms
+16 timing config:load:validate Completed in 1ms
+17 timing config:load:credentials Completed in 0ms
+18 timing config:load:setEnvs Completed in 1ms
+19 timing config:load Completed in 13ms
+20 timing npm:load:configload Completed in 13ms
+21 timing npm:load:mkdirpcache Completed in 2ms
+22 timing npm:load:mkdirplogs Completed in 0ms
+23 verbose title npm install
+24 verbose argv "install" "--loglevel" "verbose" "--cache" "/workspace/pSaas/venv/.npm" "--tmp" "/workspace/pSaas/venv/tmp" "--prefix" "/workspace/pSaas/venv"
+25 timing npm:load:setTitle Completed in 1ms
+26 timing config:load:flatten Completed in 3ms
+27 timing npm:load:display Completed in 9ms
+28 verbose logfile logs-max:10 dir:/workspace/pSaas/venv/.npm/_logs
+29 verbose logfile /workspace/pSaas/venv/.npm/_logs/2023-03-27T19_06_23_761Z-debug-0.log
+30 timing npm:load:logFile Completed in 5ms
+31 timing npm:load:timers Completed in 0ms
+32 timing npm:load:configScope Completed in 0ms
+33 timing npm:load Completed in 31ms
+34 timing arborist:ctor Completed in 0ms
+35 silly logfile done cleaning log files
+36 timing arborist:ctor Completed in 1ms
+37 timing idealTree:init Completed in 12ms
+38 timing idealTree:userRequests Completed in 0ms
+39 silly idealTree buildDeps
+40 silly fetch manifest jquery@~3.6.0
+41 http fetch GET 200 https://registry.npmjs.org/jquery 73ms (cache miss)
+42 silly fetch manifest moment@~2.29.4
+43 http fetch GET 200 https://registry.npmjs.org/moment 42ms (cache miss)
+44 silly fetch manifest moment-timezone@0.5.33
+45 http fetch GET 200 https://registry.npmjs.org/npm 168ms (cache miss)
+46 http fetch GET 200 https://registry.npmjs.org/moment-timezone 38ms (cache miss)
+47 silly fetch manifest vue@^2.6.14
+48 http fetch GET 200 https://registry.npmjs.org/vue 50ms (cache miss)
+49 silly fetch manifest vue-croppa@^1.3.8
+50 http fetch GET 200 https://registry.npmjs.org/vue-croppa 135ms (cache miss)
+51 silly fetch manifest vue-infinite-loading@^2.4.5
+52 http fetch GET 200 https://registry.npmjs.org/vue-infinite-loading 81ms (cache miss)
+53 silly placeDep ROOT jquery@3.6.4 OK for: djaodjin-saas-ui@0.1.0 want: ~3.6.0
+54 silly placeDep ROOT moment@2.29.4 OK for: djaodjin-saas-ui@0.1.0 want: ~2.29.4
+55 silly placeDep ROOT moment-timezone@0.5.33 OK for: djaodjin-saas-ui@0.1.0 want: 0.5.33
+56 silly placeDep ROOT vue@2.7.14 OK for: djaodjin-saas-ui@0.1.0 want: ^2.6.14
+57 silly placeDep ROOT vue-croppa@1.3.8 OK for: djaodjin-saas-ui@0.1.0 want: ^1.3.8
+58 silly placeDep ROOT vue-infinite-loading@2.4.5 OK for: djaodjin-saas-ui@0.1.0 want: ^2.4.5
+59 silly fetch manifest @vue/compiler-sfc@2.7.14
+60 silly fetch manifest csstype@^3.1.0
+61 silly fetch manifest canvas-exif-orientation@^0.4.0
+62 silly fetch manifest object-assign@^4.1.1
+63 http fetch GET 200 https://registry.npmjs.org/csstype 30ms (cache miss)
+64 http fetch GET 200 https://registry.npmjs.org/object-assign 58ms (cache miss)
+65 http fetch GET 200 https://registry.npmjs.org/@vue%2fcompiler-sfc 62ms (cache miss)
+66 http fetch GET 200 https://registry.npmjs.org/canvas-exif-orientation 80ms (cache miss)
+67 timing idealTree:#root Completed in 541ms
+68 timing idealTree:node_modules/jquery Completed in 0ms
+69 timing idealTree:node_modules/moment Completed in 0ms
+70 timing idealTree:node_modules/moment-timezone Completed in 0ms
+71 silly placeDep ROOT @vue/compiler-sfc@2.7.14 OK for: vue@2.7.14 want: 2.7.14
+72 silly placeDep ROOT csstype@3.1.1 OK for: vue@2.7.14 want: ^3.1.0
+73 silly fetch manifest @babel/parser@^7.18.4
+74 silly fetch manifest postcss@^8.4.14
+75 silly fetch manifest source-map@^0.6.1
+76 http fetch GET 200 https://registry.npmjs.org/source-map 34ms (cache miss)
+77 http fetch GET 200 https://registry.npmjs.org/postcss 65ms (cache miss)
+78 http fetch GET 200 https://registry.npmjs.org/@babel%2fparser 69ms (cache miss)
+79 timing idealTree:node_modules/vue Completed in 76ms
+80 silly placeDep ROOT @babel/parser@7.21.3 OK for: @vue/compiler-sfc@2.7.14 want: ^7.18.4
+81 silly placeDep ROOT postcss@8.4.21 OK for: @vue/compiler-sfc@2.7.14 want: ^8.4.14
+82 silly placeDep ROOT source-map@0.6.1 OK for: @vue/compiler-sfc@2.7.14 want: ^0.6.1
+83 silly fetch manifest nanoid@^3.3.4
+84 silly fetch manifest picocolors@^1.0.0
+85 silly fetch manifest source-map-js@^1.0.2
+86 http fetch GET 200 https://registry.npmjs.org/picocolors 34ms (cache miss)
+87 http fetch GET 200 https://registry.npmjs.org/source-map-js 35ms (cache miss)
+88 http fetch GET 200 https://registry.npmjs.org/nanoid 37ms (cache miss)
+89 timing idealTree:node_modules/@vue/compiler-sfc Completed in 48ms
+90 timing idealTree:node_modules/@babel/parser Completed in 1ms
+91 timing idealTree:node_modules/csstype Completed in 0ms
+92 silly placeDep ROOT nanoid@3.3.6 OK for: postcss@8.4.21 want: ^3.3.4
+93 silly placeDep ROOT picocolors@1.0.0 OK for: postcss@8.4.21 want: ^1.0.0
+94 silly placeDep ROOT source-map-js@1.0.2 OK for: postcss@8.4.21 want: ^1.0.2
+95 timing idealTree:node_modules/postcss Completed in 5ms
+96 timing idealTree:node_modules/nanoid Completed in 0ms
+97 timing idealTree:node_modules/picocolors Completed in 0ms
+98 timing idealTree:node_modules/source-map Completed in 0ms
+99 timing idealTree:node_modules/source-map-js Completed in 0ms
+100 silly placeDep ROOT canvas-exif-orientation@0.4.0 OK for: vue-croppa@1.3.8 want: ^0.4.0
+101 silly placeDep ROOT object-assign@4.1.1 OK for: vue-croppa@1.3.8 want: ^4.1.1
+102 timing idealTree:node_modules/vue-croppa Completed in 2ms
+103 timing idealTree:node_modules/canvas-exif-orientation Completed in 0ms
+104 timing idealTree:node_modules/object-assign Completed in 0ms
+105 timing idealTree:node_modules/vue-infinite-loading Completed in 0ms
+106 timing idealTree:buildDeps Completed in 679ms
+107 timing idealTree:fixDepFlags Completed in 0ms
+108 timing idealTree Completed in 693ms
+109 timing reify:loadTrees Completed in 695ms
+110 timing reify:diffTrees Completed in 1ms
+111 silly reify moves {}
+112 timing reify:retireShallow Completed in 1ms
+113 timing reify:createSparse Completed in 9ms
+114 timing reify:loadBundles Completed in 0ms
+115 silly audit bulk request {
+115 silly audit   jquery: [ '3.6.4' ],
+115 silly audit   moment: [ '2.29.4' ],
+115 silly audit   'moment-timezone': [ '0.5.33' ],
+115 silly audit   vue: [ '2.7.14' ],
+115 silly audit   'vue-croppa': [ '1.3.8' ],
+115 silly audit   'vue-infinite-loading': [ '2.4.5' ],
+115 silly audit   '@vue/compiler-sfc': [ '2.7.14' ],
+115 silly audit   csstype: [ '3.1.1' ],
+115 silly audit   '@babel/parser': [ '7.21.3' ],
+115 silly audit   postcss: [ '8.4.21' ],
+115 silly audit   'source-map': [ '0.6.1' ],
+115 silly audit   nanoid: [ '3.3.6' ],
+115 silly audit   picocolors: [ '1.0.0' ],
+115 silly audit   'source-map-js': [ '1.0.2' ],
+115 silly audit   'canvas-exif-orientation': [ '0.4.0' ],
+115 silly audit   'object-assign': [ '4.1.1' ]
+115 silly audit }
+116 silly tarball no local data for object-assign@https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz. Extracting by manifest.
+117 silly tarball no local data for canvas-exif-orientation@https://registry.npmjs.org/canvas-exif-orientation/-/canvas-exif-orientation-0.4.0.tgz. Extracting by manifest.
+118 silly tarball no local data for picocolors@https://registry.npmjs.org/picocolors/-/picocolors-1.0.0.tgz. Extracting by manifest.
+119 silly tarball no local data for nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.6.tgz. Extracting by manifest.
+120 silly tarball no local data for source-map-js@https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz. Extracting by manifest.
+121 silly tarball no local data for postcss@https://registry.npmjs.org/postcss/-/postcss-8.4.21.tgz. Extracting by manifest.
+122 silly tarball no local data for source-map@https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz. Extracting by manifest.
+123 silly tarball no local data for @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-7.21.3.tgz. Extracting by manifest.
+124 silly tarball no local data for csstype@https://registry.npmjs.org/csstype/-/csstype-3.1.1.tgz. Extracting by manifest.
+125 silly tarball no local data for @vue/compiler-sfc@https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-2.7.14.tgz. Extracting by manifest.
+126 silly tarball no local data for vue-infinite-loading@https://registry.npmjs.org/vue-infinite-loading/-/vue-infinite-loading-2.4.5.tgz. Extracting by manifest.
+127 silly tarball no local data for vue@https://registry.npmjs.org/vue/-/vue-2.7.14.tgz. Extracting by manifest.
+128 silly tarball no local data for moment-timezone@https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.33.tgz. Extracting by manifest.
+129 silly tarball no local data for vue-croppa@https://registry.npmjs.org/vue-croppa/-/vue-croppa-1.3.8.tgz. Extracting by manifest.
+130 silly tarball no local data for moment@https://registry.npmjs.org/moment/-/moment-2.29.4.tgz. Extracting by manifest.
+131 silly tarball no local data for jquery@https://registry.npmjs.org/jquery/-/jquery-3.6.4.tgz. Extracting by manifest.
+132 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 90ms
+133 timing auditReport:getReport Completed in 94ms
+134 silly audit report {
+134 silly audit report   'moment-timezone': [
+134 silly audit report     {
+134 silly audit report       id: 1088402,
+134 silly audit report       url: 'https://github.com/advisories/GHSA-56x4-j7p9-fcf9',
+134 silly audit report       title: 'Command Injection in moment-timezone',
+134 silly audit report       severity: 'low',
+134 silly audit report       vulnerable_versions: '>=0.1.0 <0.5.35',
+134 silly audit report       cwe: [],
+134 silly audit report       cvss: [Object]
+134 silly audit report     },
+134 silly audit report     {
+134 silly audit report       id: 1088403,
+134 silly audit report       url: 'https://github.com/advisories/GHSA-v78c-4p63-2j6c',
+134 silly audit report       title: 'Cleartext Transmission of Sensitive Information in moment-timezone',
+134 silly audit report       severity: 'moderate',
+134 silly audit report       vulnerable_versions: '>=0.1.0 <0.5.35',
+134 silly audit report       cwe: [Array],
+134 silly audit report       cvss: [Object]
+134 silly audit report     }
+134 silly audit report   ]
+134 silly audit report }
+135 timing metavuln:packument:moment-timezone Completed in 1ms
+136 timing metavuln:cache:get:security-advisory:moment-timezone:SObd/1KBki8CTciP7hTAxxbBsHY67EfJt65KcdlReUcejQkS80ydYN56heHVqCI1Q9L3NdJxegOh4InbrnFMUQ== Completed in 20ms
+137 timing metavuln:load:security-advisory:moment-timezone:1088402 Completed in 5ms
+138 timing metavuln:cache:get:security-advisory:moment-timezone:QKrwBXiXffsnmkLD5HKJb9EdwHiuVc/Vsj97qHoskpDW5zThG81iEzSM7uQkCdCmHtiWY7CwQ7a1jcMVq5V4Qg== Completed in 26ms
+139 timing metavuln:load:security-advisory:moment-timezone:1088403 Completed in 5ms
+140 timing metavuln:cache:put:security-advisory:moment-timezone:SObd/1KBki8CTciP7hTAxxbBsHY67EfJt65KcdlReUcejQkS80ydYN56heHVqCI1Q9L3NdJxegOh4InbrnFMUQ== Completed in 68ms
+141 timing metavuln:calculate:security-advisory:moment-timezone:1088402 Completed in 93ms
+142 http fetch GET 200 https://registry.npmjs.org/picocolors/-/picocolors-1.0.0.tgz 163ms (cache miss)
+143 timing reifyNode:node_modules/picocolors Completed in 196ms
+144 http fetch GET 200 https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz 168ms (cache miss)
+145 timing reifyNode:node_modules/object-assign Completed in 197ms
+146 http fetch GET 200 https://registry.npmjs.org/canvas-exif-orientation/-/canvas-exif-orientation-0.4.0.tgz 177ms (cache miss)
+147 timing reifyNode:node_modules/canvas-exif-orientation Completed in 209ms
+148 timing metavuln:cache:put:security-advisory:moment-timezone:QKrwBXiXffsnmkLD5HKJb9EdwHiuVc/Vsj97qHoskpDW5zThG81iEzSM7uQkCdCmHtiWY7CwQ7a1jcMVq5V4Qg== Completed in 104ms
+149 timing metavuln:calculate:security-advisory:moment-timezone:1088403 Completed in 135ms
+150 timing auditReport:init Completed in 139ms
+151 timing reify:audit Completed in 235ms
+152 http fetch GET 200 https://registry.npmjs.org/nanoid/-/nanoid-3.3.6.tgz 291ms (cache miss)
+153 timing reifyNode:node_modules/nanoid Completed in 325ms
+154 http fetch GET 200 https://registry.npmjs.org/vue-infinite-loading/-/vue-infinite-loading-2.4.5.tgz 309ms (cache miss)
+155 timing reifyNode:node_modules/vue-infinite-loading Completed in 353ms
+156 http fetch GET 200 https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz 344ms (cache miss)
+157 timing reifyNode:node_modules/source-map-js Completed in 379ms
+158 http fetch GET 200 https://registry.npmjs.org/vue-croppa/-/vue-croppa-1.3.8.tgz 334ms (cache miss)
+159 timing reifyNode:node_modules/vue-croppa Completed in 384ms
+160 http fetch GET 200 https://registry.npmjs.org/postcss/-/postcss-8.4.21.tgz 428ms (cache miss)
+161 timing reifyNode:node_modules/postcss Completed in 465ms
+162 http fetch GET 200 https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-2.7.14.tgz 429ms (cache miss)
+163 timing reifyNode:node_modules/@vue/compiler-sfc Completed in 472ms
+164 http fetch GET 200 https://registry.npmjs.org/csstype/-/csstype-3.1.1.tgz 442ms (cache miss)
+165 timing reifyNode:node_modules/csstype Completed in 484ms
+166 http fetch GET 200 https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz 454ms (cache miss)
+167 timing reifyNode:node_modules/source-map Completed in 492ms
+168 http fetch GET 200 https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.33.tgz 475ms (cache miss)
+169 timing reifyNode:node_modules/moment-timezone Completed in 523ms
+170 http fetch GET 200 https://registry.npmjs.org/@babel/parser/-/parser-7.21.3.tgz 529ms (cache miss)
+171 timing reifyNode:node_modules/@babel/parser Completed in 568ms
+172 http fetch GET 200 https://registry.npmjs.org/jquery/-/jquery-3.6.4.tgz 555ms (cache miss)
+173 timing reifyNode:node_modules/jquery Completed in 609ms
+174 http fetch GET 200 https://registry.npmjs.org/vue/-/vue-2.7.14.tgz 730ms (cache miss)
+175 timing reifyNode:node_modules/vue Completed in 776ms
+176 http fetch GET 200 https://registry.npmjs.org/moment/-/moment-2.29.4.tgz 754ms (cache miss)
+177 timing reifyNode:node_modules/moment Completed in 805ms
+178 timing reify:unpack Completed in 809ms
+179 timing reify:unretire Completed in 0ms
+180 timing build:queue Completed in 1ms
+181 timing build:link:node_modules/nanoid Completed in 2ms
+182 timing build:link:node_modules/@babel/parser Completed in 2ms
+183 timing build:link Completed in 3ms
+184 timing build:deps Completed in 6ms
+185 timing build Completed in 6ms
+186 timing reify:build Completed in 7ms
+187 timing reify:trash Completed in 0ms
+188 timing reify:save Completed in 6ms
+189 timing reify Completed in 1572ms
+190 silly ADD node_modules/object-assign
+191 silly ADD node_modules/canvas-exif-orientation
+192 silly ADD node_modules/source-map-js
+193 silly ADD node_modules/picocolors
+194 silly ADD node_modules/nanoid
+195 silly ADD node_modules/source-map
+196 silly ADD node_modules/postcss
+197 silly ADD node_modules/@babel/parser
+198 silly ADD node_modules/csstype
+199 silly ADD node_modules/@vue/compiler-sfc
+200 silly ADD node_modules/vue-infinite-loading
+201 silly ADD node_modules/vue-croppa
+202 silly ADD node_modules/vue
+203 silly ADD node_modules/moment-timezone
+204 silly ADD node_modules/moment
+205 silly ADD node_modules/jquery
+206 timing command:install Completed in 1583ms
+207 notice
+207 notice New [31mmajor[39m version of npm available! [31m8.19.3[39m -> [32m9.6.2[39m
+207 notice Changelog: [36mhttps://github.com/npm/cli/releases/tag/v9.6.2[39m
+207 notice Run [32mnpm install -g npm@9.6.2[39m to update!
+207 notice
+208 verbose exit 0
+209 timing npm Completed in 1690ms
+210 info ok

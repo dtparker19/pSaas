@@ -97,12 +97,12 @@ MIDDLEWARE = (
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': DB_NAME,
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'micro_course',
+        'USER': 'prodigyadmin',
+        'PASSWORD': 'M@13579!!!a',
+        'HOST': 'domainz.postgres.database.azure.com',
+        'PORT': '5432',
     }
 }
 
