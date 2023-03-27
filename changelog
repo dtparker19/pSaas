@@ -1,0 +1,366 @@
+Roadmap
+=======
+
+1.0
+
+  * rename <organization> into <profile> in url paths
+  * support for Vue3
+  * adds APIs for UseCharge
+
+Released versions
+=================
+
+0.15.5
+
+  * removes dependency on vue-infinite-loading for pagination
+  * makes broker fee functional
+  * enables override of product_url
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Sat, 25 Feb 2023 06:54:00 -0700
+
+0.15.4
+
+  * uses unique slug for RoleDescription to be consistent with Plan
+  * escapes comma instead of spaces in typeahead search to improve usability
+  * fixes `fail_subcription` when dealing with a single Plan
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Wed,  4 Jan 2023 12:05:00 -0700
+
+0.15.3
+
+  * supports list of plans in fail_subcription
+  * fixes search by ForeignKey in roles page
+  * adds computed boolean `outdated` query params
+  * redirects when creating a profile as part of workflow
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Fri, 16 Dec 2022 21:22:00 -0700
+
+0.15.2
+
+  * adds optional URL to download a PDF version of a receipt
+  * unsubscribes only subscriber through a plan API (fixes regression)
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Fri,  7 Oct 2022 13:35:00 -0700
+
+0.15.1
+
+  * uses serialized transactions in notifications (fixes regression)
+  * fitlers by a search term (fixes regression)
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Mon,  3 Oct 2022 14:45:00 -0700
+
+0.15.0
+
+  * reworks API for active, all and churned subscriptions for consistency
+  * reverts to detail serializer in key list APIs
+  * fixes unengaged db query (ORM did not produce expected code)
+  * fixes regression to show registered users to broker
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Fri, 16 Sep 2022 13:40:00 -0700
+
+0.14.0
+
+  * consistently uses profile fields in serializers
+  * searches one of space-separated terms (use "" for `and`)
+  * makes definition of SAAS_ORGANIZATION_MODEL optionnal (regression 0.12.0)
+  * expects `full_name` when creating subscription
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Thu, 25 Aug 2022 20:58:00 -0700
+
+0.12.0
+
+  * removes trailing '/' for all API endpoints
+  * adds profile slug in charge APIs (/api/billing/{profile}/charges/{charge})
+  * returns plan title in CartItemSerializer
+  * supports Django4.0
+  * upgrades testsite to default to Django3.2
+  * moves HTML views urls to urls.views module
+  * prepares change from organization_url_kwarg to profile_url_kwarg
+
+  Thank you to [Amir Raouf](https://github.com/amirraouf)
+  for the following contributions:
+
+  * Add abstract classes for Role and Organization Model
+  * Map foreign keys to settings ORGANIZATION_MODEL instead of explicit
+        Organization model
+  * Fix model choices to be tuple instead of set
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Wed, 20 July 2022 19:00:00 -0700
+
+0.11.0
+
+  * fixes balance when extending a subscription through a group buy
+  * fixes line items when checkout a group buy (#154, #155)
+  * adds engaged/unengaged subscribers APIs
+  * moves create shadow profile to /api/accounts/profiles/
+  * adds inital compatibility with Django4.0
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Tue, 24 May 2022 19:47:00 -0700
+
+0.10.3
+
+  * adds API to retrieve inactive profiles
+  * fixes multiple issues with create profile and optional fields
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Tue,  7 Dec 2021 03:12:00 -0700
+
+0.10.2
+
+  * restores backward compatibility - subscriptions key in profile detail API
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Thu, 27 Oct 2021 12:46:00 -0700
+
+0.10.1
+
+  * moves serializers.UserSerializer to serializers_overrides.UserSerializer
+  * enables broker profile manager to update global RoleDescriptions
+  * normalizes phone number before saving them into the database
+  * prevents use of Coupon above nb_attempts limit (fix)
+  * enables to customize html/css for pagination links
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Thu, 30 Sep 2021 00:00:00 -0700
+
+0.10.0
+
+  * works with with Django3.2
+  * prepares compatibility with Vue3
+  * moves all i18n translation server-side
+  * renames `subscriptions` key into `subscribes_to` as it points to a Plan
+  * categorizes a double-POST of the same Stripe token as a CardError
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Sun, 18 Jul 2021 17:30:00 -0700
+
+0.9.5
+
+  * keeps user model fields in sync with personal billing profile
+  * prints last4 as exactly 4 digits on receipts
+  * fixes index error in the presence of 100% discount and advance payments
+  * fixes statement balances in the presence of GroupBuy
+  * fixes PaymentIntent not found while using StripeConnect accounts
+  * redirects to login page on redirects-to-profile if user not authenticated
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Mon, 26 Apr 2021 22:25:00 -0700
+
+0.9.4
+
+  * adds processor in checkout and card APIs
+  * fixes computed balance due when subscription is free
+  * re-raises all StripeError as ProcessorError
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Thu, 25 Mar 2021 11:01:00 -0700
+
+0.9.3
+
+  * migrates to Stripe PaymentIntent for SCA
+  * adds balance due in checkout page
+  * computes customers lifetime value (LTV) for a provider
+  * reports error details when the payment processor has issues
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Tue, 23 Feb 2021 09:30:00 -0700
+
+0.9.2
+
+  * fixes translation of Transaction description when using period discounts
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Wed,  2 Sep 2020 10:43:00 -0700
+
+0.9.1
+
+  * translates Transaction description on display
+  * fixes regression when creating code through the API
+  * increases length of processor keys to 255
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Tue,  1 Sep 2020 17:34:00 -0700
+
+0.9.0
+
+  * reworks discount with an AdvanceDiscount model
+  * adds pricing api
+  * compatibles with Django3
+  * fixes recording CartItem twice
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Thu,  7 Jun 2020 15:30:00 -0700
+
+0.8.4
+
+  * claims organization with no roles based on e-mail address
+  * fixes implicit role grants
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Thu, 5 Mar 2020 09:35:00 -0700
+
+0.8.3
+
+  * adds implicit role to user when none exists
+  * uses class name instead of HTML node indexes as hooks in checkout pages
+  * uses consistent balance_amount/balance_unit accross APIs
+  * replaces django-urldecorators by djaodjin-rules in testsite
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Wed, 22 Jan 2020 10:15:00 -0700
+
+0.8.2
+
+  * fixes add roles and subscriptions in multiple profile/user configurations
+  * works around for Django/SQLite bug (#230)
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Fri, 13 Dec 2019 13:25:00 -0700
+
+0.8.0
+
+  * uses inline-template for Vue.js components
+  * uploads profile picture
+  * signals when processor is not connected and a charge is attempted
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Sat, 26 Oct 2019 13:10:00 -0700
+
+0.7.0
+  * adds marketplace processing fee
+  * restricts coupon to plan or number of use through UI
+  * fixes invite new organizations with erroneous slugs
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>   Sat, 14 Sep 2019 02:18:56 -0700
+
+0.6.3
+  * updates card-on-file directly in /billing/cart/ page
+  * makes /api/accounts/ a search API instead of a typeahead API
+  * fixes default search fields when looking for subscribers
+  * adds remove card-on-file button in page templates
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>   Tue, 13 Aug 2019 15:12:00 -0700
+
+0.6.2
+  * enables multiple StripeConnect authorize url (live/test)
+  * fixes infinitescroll
+  * fixes connect DELETE method to unsubscribes
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>   Wed, 7 Aug 2019 00:00:00 -0700
+
+0.6.1
+  * improves API documentation
+  * creates billing profile implicitely in various workflows
+  * adds hooks for infinitescroll
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>   Tue, 30 Jul 2019 00:00:00 -0700
+
+0.6.0
+  * supports sort by multiple columns (#182)
+  * adds day_periods function (#199)
+  * displays invited/requested roles first
+  * populates organization fields when it is created alongside a subscription
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>   Mon, 10 Jun 2019 12:26:00 -0700
+
+0.5.1
+  * adss API to accept a role grant
+  * fixes calculations of `invited_count` and `requested_count` through filters
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>   Fri, 3 May 2019 13:33:00 -0700
+
+0.5.0
+  * adss role_status filter (active/invited/requested) to roles APIs
+  * improves support of search accounts APIs for typeahead
+  * adds sign agreement API
+  * moves is_broker from saas.models to saas.utils
+  * inserts only views related to the type of organization in `urls` context
+        such that it is simpler to generate menu bars.
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>   Tue, 23 Apr 2019 09:12:03 -0700
+
+0.4.1
+  * separates search api for type-ahead candidate lists
+  * adds filter and sort to plans API
+  * fixes #180
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>   Fri, 5 Apr 2019 12:04:48 -0700
+
+0.4.0
+  * defaults to vuejs front-end
+  * merges Organization and User profile APIs
+  * adds i18n translations to javascript
+  * adds picture field to Organization
+  * adds API endpoint to re-send an invitation.
+  * removes default natural `start_at` date on queries. it wasn't so natural
+    after all.
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Sun, 31 Mar 2019 09:38:37 -0700
+
+0.3.4
+
+  * adds experimental vue.js front-end
+  * triggers more signals when getting closer to renewal time
+  * uses broker as a candidate in fail_direct
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Tue, 4 Dec 2018 14:26:47 -0800
+
+0.3.2
+
+  * Compatible with Django 2.0.x
+  * Adds command to reconcile payouts with processor
+  * Generates revenue reports in utc and local time
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Fri, 27 Apr 2018 08:25:09 -0700
+
+0.3.0
+
+  * Grants and requests for double opt-in on roles and subscriptions.
+  * Adds logic for use charges
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Wed, 13 Dec 2017 12:12:20 -0700
+
+0.2.6
+
+  * Compatible with Python 3.6
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Tue, 27 Jun 2017 12:12:20 -0700
+
+0.2.4
+
+  * Generic roles
+  * Cancel total balance due (#95)
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Wed, 7 Sep 2016 00:00:00 -0900
+
+0.2.3
+
+  * API to checkout cart
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Sun, 26 Jun 2016 00:00:00 -0900
+
+0.2.2
+  * Create dashboard views
+  * Generate requests for a role on an organization
+  * Add Razorpay backend
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Tue, 24 May 2016 00:00:00 -0900
+
+0.2.0
+
+  * Generalize role relationship
+  * Replace Stripe Recipients by use of StripeConnect
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Fri, 5 Feb 2016 00:00:00 -0900
+
+0.1.8
+
+  * Refactor ledger to fully support backlog accounting
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Thu, 13 Aug 2015 00:00:00 -0900
+
+0.1.7
+
+  * Update support to Django 1.7 and django-restframework 3.1
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Wed, 13 May 2015 00:00:00 -0900
+
+0.1.4
+
+  * Create coupon metrics pages
+  * Clean REST API
+  * Simplify template names
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Thu, 14 Aug 2014 15:16:57 -0700
+
+0.1.3
+
+  * Initial Release.
+
+ -- Sebastien Mirolo <smirolo@djaodjin.com>  Mon, 26 May 2014 00:08:22 -0700

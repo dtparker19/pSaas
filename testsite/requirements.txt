@@ -1,0 +1,31 @@
+Django==3.2.18
+django-countries==7.2.1
+django-localflavor==3.1
+django-phonenumber-field==5.2.0
+djangorestframework==3.12.4
+# We need Python Markdown for django.contrib.markup. markdown2 is not enough.
+Markdown==3.2.2
+phonenumbers==8.12.6
+python-dateutil==2.8.1
+PyJWT==2.4.0
+razorpay==0.2.0
+stripe==5.0.0
+
+# testsite-only
+coverage==6.3.2
+django-debug-toolbar==3.5.0       # 3.4.0 requires Django>=3.2
+                                  # 3.2.4 fails with SQLPanel is not scriptable
+                                  # 2.2.1 is the last version for Django2.2
+django-extensions==3.2.0          # 3.2.0 required by Django==4.0
+djaodjin-rules==0.2.9
+gunicorn==20.0.4
+whitenoise==5.1.0
+
+# development
+Sphinx==3.0.3
+sphinxcontrib-httpdomain==1.7.0
+
+# When running with Py37, we transitively use the `importlib-metadata`
+# package through `djangorestframework` -> `makrdown`. Latest version (>=5.0)
+# lead to an error: `'EntryPoints' object has no attribute 'get'`.
+importlib-metadata==4.13.0
